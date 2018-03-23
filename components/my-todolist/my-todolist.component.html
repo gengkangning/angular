@@ -1,0 +1,18 @@
+<input type="text" [(ngModel)]="data">
+<button (click)="add()">添加数据</button>
+<h1>正在进行</h1>
+<ul>
+  <li *ngFor="let item of dataArr1,let a =index">
+      <input type="checkbox" (click)="achive(a)">
+    {{item}}
+    <button (click)="del(a)">删除</button>
+  </li>
+</ul>
+<h1>已经完成</h1>
+<ul>
+  <li *ngFor="let item of dataArr2,let a =index">
+    <input type="checkbox" checked>
+    {{item}}
+    <button (click)="del1(a)">删除</button>
+  </li>
+</ul>
