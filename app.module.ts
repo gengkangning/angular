@@ -8,6 +8,9 @@ import { TodolistComponent } from './components/todolist/todolist.component';
 import { GoodslistComponent } from './components/goodslist/goodslist.component';
 import { VoterComponent } from './components/voter/voter.component';
 import { TestComponent } from './components/test/test.component';
+import { MyTodolistComponent } from './components/my-todolist/my-todolist.component';
+import { MyInputComponent } from './components/my-input/my-input.component';
+import {SaveService} from './services/save.service';
 
 
 @NgModule({
@@ -17,12 +20,14 @@ import { TestComponent } from './components/test/test.component';
     GoodslistComponent,
     VoterComponent,
     TestComponent,
+    MyTodolistComponent,
+    MyInputComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [SaveService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
